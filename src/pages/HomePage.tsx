@@ -12,13 +12,15 @@ import PartnersSection from './HomePage/sections/Partners';
 import FaqSection from './HomePage/sections/Faq';
 import ContactSection from './HomePage/sections/Contact';
 
-export default function HomePage(): React.JSX.Element {
+
+import CtaSection from './HomePage/sections/Cta';export default function HomePage(): React.JSX.Element {
   return (
     <>
       <HomeSection />
       <AboutSection />
       <ProductsSection />
       <ServicesSection />
+      <CtaSection />
       <TestimonialsSection />
       <PartnersSection />
       <FaqSection />
