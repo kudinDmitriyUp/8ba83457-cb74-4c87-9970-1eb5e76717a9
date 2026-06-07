@@ -43,6 +43,7 @@ export default function Layout() {
       <SectionErrorBoundary name="navbar">
         <NavbarFloatingLogo
       logo="The Daily Crumb"
+      logoImageSrc="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=100&h=100&fit=crop&q=80"
       ctaButton={{
         text: "Order Now",
         href: "#contact",
