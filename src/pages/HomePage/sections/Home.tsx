@@ -10,18 +10,20 @@ export default function HomeSection(): React.JSX.Element {
     <div id="home" data-section="home">
         <SectionErrorBoundary name="home">
               <HeroBillboard
-          title="Your Daily Dose of Artisan Freshness"
-          description="Artisan breads, pastries, and custom cakes crafted with premium ingredients. Order online or visit us today."
-          primaryButton={{
+        title="Your Daily Dose of Artisan Freshness"
+        description="Artisan breads, pastries, and custom cakes crafted with premium ingredients. Order online or visit us today."
+        primaryButton={{
             text: "Order Now",
             href: "#contact",
           }}
-          secondaryButton={{
+        secondaryButton={{
             text: "Our Menu",
             href: "#products",
           }}
-          imageSrc="http://img.b2bpic.net/free-photo/top-view-mix-breads-cookies-with-brown-sugar-cubes_23-2148695485.jpg"
-        />
+        imageSrc="http://img.b2bpic.net/free-photo/top-view-mix-breads-cookies-with-brown-sugar-cubes_23-2148695485.jpg"
+        avatarsLabel="Trusted by 1000+ customers"
+        avatarsSrc={["https://i.pravatar.cc/150?img=1","https://i.pravatar.cc/150?img=2","https://i.pravatar.cc/150?img=3","https://i.pravatar.cc/150?img=4","https://i.pravatar.cc/150?img=5"]}
+      />
         </SectionErrorBoundary>
       </div>
   );
