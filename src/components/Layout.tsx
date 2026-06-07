@@ -8,32 +8,25 @@ import { StyleProvider } from "@/components/ui/StyleProvider";
 export default function Layout() {
   const navItems = [
   {
-    "name": "Home",
-    "href": "#home"
+    "name": "Home",    "href": "#home"
   },
   {
-    "name": "Products",
-    "href": "#products"
+    "name": "Products",    "href": "#products"
   },
   {
-    "name": "Our Story",
-    "href": "#about"
+    "name": "Our Story",    "href": "#about"
   },
   {
-    "name": "Services",
-    "href": "#services"
+    "name": "Services",    "href": "#services"
   },
   {
-    "name": "Testimonials",
-    "href": "#testimonials"
+    "name": "Testimonials",    "href": "#testimonials"
   },
   {
-    "name": "FAQs",
-    "href": "#faq"
+    "name": "FAQs",    "href": "#faq"
   },
   {
-    "name": "Contact",
-    "href": "#contact"
+    "name": "Contact",    "href": "#contact"
   }
 ];
 
@@ -43,10 +36,9 @@ export default function Layout() {
       <SectionErrorBoundary name="navbar">
         <NavbarFloatingLogo
       logo="The Daily Crumb"
+      logoImageSrc="http://img.b2bpic.net/free-vector/minimal-bakery-shop-label-collection_23-2149413051.jpg"
       ctaButton={{
-        text: "Order Now",
-        href: "#contact",
-      }}
+        text: "Order Now",        href: "#contact"}}
      navItems={navItems} />
       </SectionErrorBoundary>
       <main className="flex-grow">
@@ -56,54 +48,33 @@ export default function Layout() {
         <FooterBasic
       columns={[
         {
-          title: "Bakery",
-          items: [
+          title: "Bakery",          items: [
             {
-              label: "Our Story",
-              href: "#about",
-            },
+              label: "Our Story",              href: "#about"},
             {
-              label: "Our Menu",
-              href: "#products",
-            },
+              label: "Our Menu",              href: "#products"},
             {
-              label: "Specialty Orders",
-              href: "#services",
-            },
+              label: "Specialty Orders",              href: "#services"},
           ],
         },
         {
-          title: "Support",
-          items: [
+          title: "Support",          items: [
             {
-              label: "FAQs",
-              href: "#faq",
-            },
+              label: "FAQs",              href: "#faq"},
             {
-              label: "Contact Us",
-              href: "#contact",
-            },
+              label: "Contact Us",              href: "#contact"},
             {
-              label: "Wholesale Inquiry",
-              href: "#contact",
-            },
+              label: "Wholesale Inquiry",              href: "#contact"},
           ],
         },
         {
-          title: "Connect",
-          items: [
+          title: "Connect",          items: [
             {
-              label: "Facebook",
-              href: "https://facebook.com/thedailycrumb",
-            },
+              label: "Facebook",              href: "https://facebook.com/thedailycrumb"},
             {
-              label: "Instagram",
-              href: "https://instagram.com/thedailycrumb",
-            },
+              label: "Instagram",              href: "https://instagram.com/thedailycrumb"},
             {
-              label: "Leave a Review",
-              href: "#testimonials",
-            },
+              label: "Leave a Review",              href: "#testimonials"},
           ],
         },
       ]}
