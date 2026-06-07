@@ -14,7 +14,7 @@ export default function HomePage() {
   <div id="home" data-section="home">
     <SectionErrorBoundary name="home">
           <HeroBillboard
-      title="Freshly Baked Goodness, Made Daily"
+      title="Your Daily Dose of Artisan Freshness"
       description="Artisan breads, pastries, and custom cakes crafted with premium ingredients. Order online or visit us today."
       primaryButton={{
         text: "Order Now",
