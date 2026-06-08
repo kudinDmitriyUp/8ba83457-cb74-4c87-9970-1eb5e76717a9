@@ -4,52 +4,6 @@ import SectionErrorBoundary from "@/components/ui/SectionErrorBoundary";
 import SiteBackgroundSlot from "@/components/ui/SiteBackgroundSlot";
 import { Outlet } from 'react-router-dom';
 import { StyleProvider } from "@/components/ui/StyleProvider";
-import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
-import Button from '@/components/ui/Button';
-
-function DiscountPill() {
-  const [timeLeft, setTimeLeft] = useState(300);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    if (timeLeft <= 0) return;
-    const timer = setInterval(() => {
-      setTimeLeft(prev => prev - 1);
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [timeLeft]);
-
-  if (!isVisible) return null;
-
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = timeLeft % 60;
-
-  return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4 pointer-events-none">
-      <motion.div 
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className="bg-card border border-border shadow-xl rounded-full p-2 pl-6 flex items-center justify-between gap-4 pointer-events-auto mx-auto w-max max-w-full"
-      >
-        <div className="flex items-center gap-3 overflow-hidden">
-          <span className="text-sm font-medium text-foreground truncate">
-            Opt in for today's discount!
-          </span>
-          <span className="text-primary-cta font-bold font-mono bg-background px-2 py-1 rounded-md text-sm shrink-0">
-            {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
-          </span>
-        </div>
-        <Button 
-          text="Claim" 
-          variant="primary" 
-          className="!py-1.5 !px-4 text-sm shrink-0"
-          onClick={() => setIsVisible(false)}
-        />
-      </motion.div>
-    </div>
-  );
-}
 
 export default function Layout() {
   const navItems = [
@@ -90,7 +44,6 @@ export default function Layout() {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <DiscountPill />
       <SectionErrorBoundary name="footer">
         <FooterBasic
       columns={[
